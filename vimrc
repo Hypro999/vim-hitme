@@ -23,6 +23,10 @@ set clipboard=unnamedplus
 set splitright
 set splitbelow
 
+set textwidth=99
+set wrapmargin=0
+set colorcolumn=100
+
 
 " Default colorscheme
 colorscheme one
