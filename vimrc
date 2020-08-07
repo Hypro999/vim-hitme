@@ -56,7 +56,7 @@ noremap <silent> <leader>g<Left> :diffget //2<CR>
 
 " Configure vim-airline
 set noshowmode
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=0
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#whitespace#checks=[]
 let g:airline#extensions#tabline#formatter='jsformatter'

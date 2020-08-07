@@ -37,3 +37,9 @@ so this vim setup is configured more specifically for those languages.
 
 And that's it! You now have a powerful installation of vim suited for
 programming in python and golang.
+
+##### Bonus
+- If you have powerline fonts installed, then you can set
+  `let g:airline_powerline_fonts` to `1` instead of `0` and enjoy the
+  additional visual appeal. I personally recommend using "Source Mono
+  (for Powerline) Regular 11", it's my favorite.
