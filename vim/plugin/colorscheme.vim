@@ -1,7 +1,7 @@
 function ChangeColorSchemeDark()
         set termguicolors
         set background=dark
-        let g:airline_theme='one'
+        let g:airline_theme="one"
         colorscheme one
         :AirlineRefresh
 endfunction
@@ -12,9 +12,9 @@ function ChangeColorSchemeLight()
         set notermguicolors
         set background=light
         let g:airline_theme="cool"
-        let g:solarized_visibility = "high"
-        let g:solarized_contrast = "high"
-        let g:solarized_termcolors = 256
+        let g:solarized_visibility="high"
+        let g:solarized_contrast="high"
+        let g:solarized_termcolors=256
         colorscheme solarized
         :AirlineRefresh
 endfunction

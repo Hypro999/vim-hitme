@@ -29,10 +29,10 @@ set colorcolumn=100
 
 
 " Default colorscheme
-colorscheme one
 set termguicolors
 set background=dark
-let g:airline_theme='one'
+let g:airline_theme="one"
+colorscheme one
 
 
 " Configure nerdtree
