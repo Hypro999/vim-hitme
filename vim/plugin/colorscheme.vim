@@ -11,6 +11,7 @@ nnoremap <leader>ccsd :call ChangeColorSchemeDark()<CR>
 function ChangeColorSchemeLight()
         set notermguicolors
         set background=light
+        let g:airline_theme="cool"
         let g:solarized_visibility = "high"
         let g:solarized_contrast = "high"
         let g:solarized_termcolors = 256
