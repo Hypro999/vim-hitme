@@ -24,7 +24,7 @@ set splitright
 set splitbelow
 
 
-" Colorscheme
+" Default colorscheme
 colorscheme one
 set termguicolors
 set background=dark
