@@ -89,8 +89,3 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#whitespace#checks=[]
 let g:airline#extensions#tabline#formatter='jsformatter'
 
-" Colorscheme
-set termguicolors
-set background=dark
-let g:airline_theme="one"
-colorscheme one
