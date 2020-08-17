@@ -12,6 +12,7 @@ vim -c ":PlugInstall | :Helptags | :qa"
 # Add a default colorscheme to the vimrc after we have installed all
 # of the plugins since vim-one is one of the plugins.
 cat <<EOF >> ~/.vimrc
+
 " Colorscheme
 set termguicolors
 set background=dark
