@@ -1,13 +1,4 @@
-" Enable pathogen
-execute pathogen#infect()
-
-
-" Enable syntax support
-syntax enable
-filetype plugin indent on
-
-
-" Core configuration
+""" Core configuration
 set nu
 set relativenumber
 set cursorline
@@ -27,12 +18,40 @@ set textwidth=99
 set wrapmargin=0
 set colorcolumn=100
 
+syntax enable
+filetype plugin indent on
 
-" Default colorscheme
-set termguicolors
-set background=dark
-let g:airline_theme="one"
-colorscheme one
+
+""" Plugin management via. vim-plug
+call plug#begin('~/.vim/plugged')
+
+" Core
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-repeat'
+
+" Explore
+Plug 'ctrlpvim/ctrlp.vim', { 'on': ['CtrlP', 'CtrlPBuffer', 'CtrlPMRU', 'CtrlPMixed'] }
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+
+" Git
+Plug 'tpope/vim-fugitive'
+
+" Language
+    " Go
+        Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
+
+    " Python
+        Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+
+" Theming
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'rakr/vim-one'
+Plug 'altercation/vim-colors-solarized'
+
+call plug#end()
 
 
 " Configure nerdtree
@@ -60,3 +79,9 @@ let g:airline_powerline_fonts=0
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#whitespace#checks=[]
 let g:airline#extensions#tabline#formatter='jsformatter'
+
+" Colorscheme
+set termguicolors
+set background=dark
+let g:airline_theme="one"
+colorscheme one
