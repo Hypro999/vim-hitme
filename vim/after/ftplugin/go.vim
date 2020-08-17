@@ -9,7 +9,7 @@ let g:go_auto_type_info=1
 let g:go_echo_command_info=0
 let g:go_template_autocreate=0
 let g:go_fmt_command="goimports"
-inoremap <buffer> . .<C-x><C-o>
+inoremap <buffer> . .<C-x><C-o><C-P>
 setlocal omnifunc=go#complete#Complete
 nnoremap <leader>ol :GoDecls<CR>
 
