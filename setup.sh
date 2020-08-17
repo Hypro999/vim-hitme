@@ -4,7 +4,7 @@
 cp ./vimrc ~/.vimrc
 
 # Copy over all of the vim plugins, ftplugins, etc.
-cp -r ./vim ~/.vim
+cp -rT ./vim ~/.vim
 
 # Install all of the plugins using vim-plug (which in turn uses git).
 vim -c ":PlugInstall | :Helptags | :qa"
