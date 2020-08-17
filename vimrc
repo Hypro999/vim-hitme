@@ -39,6 +39,13 @@ Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
 
 " Language
+    " Erlang
+        Plug 'vim-erlang/vim-erlang-runtime', { 'for': 'erlang' }
+        Plug 'vim-erlang/vim-erlang-compiler', { 'for': 'erlang' }
+        Plug 'vim-erlang/vim-erlang-omnicomplete', { 'for': 'erlang' }
+        Plug 'vim-erlang/vim-erlang-tags', { 'for': 'erlang' }
+        Plug 'edkolev/erlang-motions.vim', { 'for': 'erlang' }
+
     " Go
         Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 
