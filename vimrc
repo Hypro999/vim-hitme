@@ -25,7 +25,7 @@ filetype plugin indent on
 
 
 """ Plugin management via. vim-plug
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/bundle')
 
 " Core
 Plug 'tpope/vim-surround'
@@ -61,6 +61,11 @@ Plug 'rakr/vim-one'
 Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
+
+
+" Use vim-pathogen alongside vim-plug for it's
+" Helptags function and runtime-path manipulation
+execute pathogen#infect()
 
 
 " Configure nerdtree
