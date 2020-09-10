@@ -43,3 +43,5 @@ And that's it!
   `let g:airline_powerline_fonts` to `1` instead of `0` and enjoy the
   additional visual appeal. I personally recommend using "Source Mono
   (for Powerline) Regular 11", it's my favorite.
+
+- For macOS, replace `clipboard=unnamedplus` with `clipboard=unnamed` in the vimrc.
