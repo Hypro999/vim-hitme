@@ -21,6 +21,8 @@ set colorcolumn=100
 syntax enable
 filetype plugin indent on
 
+tnoremap <Esc> <C-\><C-n>
+
 
 """ Plugin management via. vim-plug
 call plug#begin('~/.vim/bundle')
