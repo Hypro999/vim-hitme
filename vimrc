@@ -15,7 +15,7 @@ set clipboard=unnamedplus
 set splitright
 set splitbelow
 
-set colorcolumn=100
+set colorcolumn=80,100
 
 syntax enable
 filetype plugin indent on
