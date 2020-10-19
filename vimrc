@@ -3,7 +3,6 @@ set nu
 set relativenumber
 set cursorline
 
-set expandtab
 set tabstop=4
 set shiftwidth=4
 
