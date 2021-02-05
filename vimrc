@@ -9,6 +9,7 @@ set shiftwidth=4
 set mouse=a
 set whichwrap=<,>,[,]
 set clipboard=unnamedplus
+set backspace=indent,eol,start
 
 set splitright
 set splitbelow
