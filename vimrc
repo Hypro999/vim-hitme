@@ -24,7 +24,7 @@ filetype plugin indent on
 
 set termguicolors
 set background=dark
-colorscheme solarized
+colorscheme solarized8_flat
 
 
 """ Plugin management (via. vim-plug)

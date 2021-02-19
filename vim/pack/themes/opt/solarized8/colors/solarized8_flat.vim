@@ -2373,4 +2373,3 @@ endif
 " Term Colors: base3  orange base1  base0  base00 violet  base01 base03
 " Background: any
 " vim: et ts=2 sw=2
-
