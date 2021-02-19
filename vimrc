@@ -1,4 +1,6 @@
 """ Core configuration
+set encoding=utf-8
+
 set nu
 set relativenumber
 set cursorline
@@ -32,10 +34,6 @@ call plug#begin()
 	Plug 'tpope/vim-unimpaired'
 	Plug 'tpope/vim-repeat'
 call plug#end()
-
-
-""" Define custom comment strings
-autocmd FileType c,cpp,h setlocal commentstring=//\ %s
 
 
 """ Key rebindings
