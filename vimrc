@@ -42,3 +42,10 @@ call plug#end()
 	" Remove all trailing whitespace:
 		noremap <silent> <leader><space> : silent! %s/\s\+$//g<CR>
 
+
+" A command mode abbreviation to map 'h' to opening docs in a new tab.
+" type out 'help' instead of 'h' to open the docs in a regular split.
+" We can't use just 'cnoreabbrev h help' since stuff like 'e h.txt'
+" would get changed to 'e tab h.txt'.
+cnoreabbrev <expr> h getcmdtype() == ":" && getcmdline() == 'h' ? 'tab help' : 'h'
+
