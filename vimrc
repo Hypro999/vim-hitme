@@ -41,6 +41,11 @@ call plug#end()
 		tnoremap <Esc> <C-\><C-n>
 	" Remove all trailing whitespace:
 		noremap <silent> <leader><space> : silent! %s/\s\+$//g<CR>
+	" Create bindings to move using hjkl in insert mode:
+		inoremap <A-h> <C-o>h
+		inoremap <A-j> <C-o>j
+		inoremap <A-k> <C-o>k
+		inoremap <A-l> <C-o>l
 
 
 " A command mode abbreviation to map 'h' to opening docs in a new tab.
