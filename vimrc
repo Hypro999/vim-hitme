@@ -22,10 +22,6 @@ set colorcolumn=80,100
 syntax enable
 filetype plugin indent on
 
-set termguicolors
-set background=dark
-colorscheme solarized8_flat
-
 
 """ Plugin management (via. vim-plug)
 call plug#begin()
@@ -36,21 +32,26 @@ call plug#begin()
 call plug#end()
 
 
-""" Key rebindings
-	" Give esc the same function in terminal mode as normal:
-		tnoremap <Esc> <C-\><C-n>
-	" Remove all trailing whitespace:
-		noremap <silent> <leader><space> : silent! %s/\s\+$//g<CR>
-	" Create bindings to move using hjkl in insert mode:
-		inoremap <A-h> <C-o>h
-		inoremap <A-j> <C-o>j
-		inoremap <A-k> <C-o>k
-		inoremap <A-l> <C-o>l
+""" Colorscheme
+set termguicolors
+set background=dark
+colorscheme solarized8_flat
 
+
+""" Key rebindings
+
+" Give esc the same function in terminal mode as normal:
+tnoremap <Esc> <C-\><C-n>
+
+" Remove all trailing whitespace:
+noremap <silent> <leader><space> : silent! %s/\s\+$//g<CR>
+
+" Create bindings to move using hjkl in insert mode:
+inoremap <A-h> <C-o>h
+inoremap <A-j> <C-o>j
+inoremap <A-k> <C-o>k
+inoremap <A-l> <C-o>l
 
 " A command mode abbreviation to map 'h' to opening docs in a new tab.
 " type out 'help' instead of 'h' to open the docs in a regular split.
-" We can't use just 'cnoreabbrev h help' since stuff like 'e h.txt'
-" would get changed to 'e tab h.txt'.
 cnoreabbrev <expr> h getcmdtype() == ":" && getcmdline() == 'h' ? 'tab help' : 'h'
-
