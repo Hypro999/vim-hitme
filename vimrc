@@ -9,6 +9,7 @@ set tabstop=4
 set shiftwidth=4
 
 set mouse=a
+set nowrap
 set whichwrap=<,>,[,]
 set clipboard=unnamedplus
 set backspace=indent,eol,start
