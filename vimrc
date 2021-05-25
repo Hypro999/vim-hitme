@@ -30,6 +30,16 @@ call plug#begin()
 	Plug 'tpope/vim-commentary'
 	Plug 'tpope/vim-unimpaired'
 	Plug 'tpope/vim-repeat'
+	Plug 'tpope/vim-fugitive'
+
+	Plug 'morhetz/gruvbox'
+	Plug 'arcticicestudio/nord-vim'
+	Plug 'lifepillar/vim-solarized8'
+
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+
+	Plug 'junegunn/fzf'
 call plug#end()
 
 
@@ -56,3 +66,16 @@ inoremap <A-l> <C-o>l
 " A command mode abbreviation to map 'h' to opening docs in a new tab.
 " type out 'help' instead of 'h' to open the docs in a regular split.
 cnoreabbrev <expr> h getcmdtype() == ":" && getcmdline() == 'h' ? 'tab help' : 'h'
+
+" Use Ctrl-P to open fzf, and Esc to exit:
+nnoremap <silent> <C-p> :FZF<CR>
+tnoremap <expr> <Esc> (&filetype == 'fzf') ? '<Esc>' : '<c-\><c-n>'
+
+
+""" Configure vim-airline
+set noshowmode
+let g:airline_powerline_fonts=0
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#whitespace#checks=[]
+let g:airline#extensions#tabline#formatter='unique_tail_improved'
+
