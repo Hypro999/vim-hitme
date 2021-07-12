@@ -7,7 +7,7 @@ for opt in $@; do
 	case "${opt}" in
 		"--clean")
 			echo "Performing a clean installation."
-			rm -rdf ~/.vim ~/.vimrc ~/.gvimrc
+			rm -rdf ~/.vim ~/.vimrc
 			;;
 		"--update")
 			echo "Updating packages."
@@ -21,7 +21,6 @@ for opt in $@; do
 done
 
 cp vimrc ~/.vimrc
-cp gvimrc ~/.gvimrc
 cp -rT vim ~/.vim
 
 if [ "${update}" = true ]; then
