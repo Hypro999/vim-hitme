@@ -22,6 +22,7 @@ set colorcolumn=80,100
 
 syntax enable
 filetype plugin indent on
+set completeopt=longest,menuone,noinsert
 
 
 """ Plugin management (via. vim-plug)
