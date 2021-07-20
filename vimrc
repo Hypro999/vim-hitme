@@ -59,6 +59,14 @@ if has('win32')
 endif
 
 
+""" Configure vim-airline
+set noshowmode
+let g:airline_powerline_fonts=0
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#whitespace#checks=[]
+let g:airline#extensions#tabline#formatter='unique_tail_improved'
+
+
 """ Give esc the same function in terminal mode as normal:
 tnoremap <Esc> <C-\><C-n>
 
@@ -84,10 +92,30 @@ nnoremap <silent> <C-p> :FZF<CR>
 tnoremap <expr> <Esc> (&filetype == 'fzf') ? '<Esc>' : '<c-\><c-n>'
 
 
-""" Configure vim-airline
-set noshowmode
-let g:airline_powerline_fonts=0
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#whitespace#checks=[]
-let g:airline#extensions#tabline#formatter='unique_tail_improved'
+""" Create a quick way to open the vimrc
+function! ChangeVimConf()
+	if has('win32') || has('win64')
+		let vimrc = fnameescape($USERPROFILE) . "\\_vimrc"
+	else
+		let vimrc = fnameescape($HOME) . "/.vimrc"
+	endif
+	execute "e! " . vimrc
+endfunction
+command! ChangeVimConf call ChangeVimConf()
+nnoremap <silent> <leader>cvc :ChangeVimConf<CR>
 
+
+""" Keybind to clear the current buffer
+nnoremap <silent> <leader>bw :bwipeout<CR>
+
+
+""" Source the current file if it's vimscript
+if !exists("*SourceVimscript")
+	function SourceVimscript()
+		if (&ft == "vim")
+			execute "so %"
+		endif
+	endfunction
+	command! SourceVimscript call SourceVimscript()
+	nnoremap <silent> <leader>so :SourceVimscript<CR>
+endif
