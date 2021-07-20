@@ -50,25 +50,27 @@ set background=dark
 colorscheme solarized8_flat
 
 
-""" Key rebindings
-
-" Give esc the same function in terminal mode as normal:
+""" Give esc the same function in terminal mode as normal:
 tnoremap <Esc> <C-\><C-n>
 
-" Remove all trailing whitespace:
+
+""" Remove all trailing whitespace:
 noremap <silent> <leader><space> : silent! %s/\s\+$//g<CR>
 
-" Create bindings to move using hjkl in insert mode:
+
+""" Create bindings to move using hjkl in insert mode:
 inoremap <A-h> <C-o>h
 inoremap <A-j> <C-o>j
 inoremap <A-k> <C-o>k
 inoremap <A-l> <C-o>l
 
-" A command mode abbreviation to map 'h' to opening docs in a new tab.
-" type out 'help' instead of 'h' to open the docs in a regular split.
+
+""" A command mode abbreviation to map 'h' to opening docs in a new tab.
+""" type out 'help' instead of 'h' to open the docs in a regular split:
 cnoreabbrev <expr> h getcmdtype() == ":" && getcmdline() == 'h' ? 'tab help' : 'h'
 
-" Use Ctrl-P to open fzf, and Esc to exit:
+
+""" Use Ctrl-P to open fzf, and Esc to exit:
 nnoremap <silent> <C-p> :FZF<CR>
 tnoremap <expr> <Esc> (&filetype == 'fzf') ? '<Esc>' : '<c-\><c-n>'
 
