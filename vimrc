@@ -40,6 +40,15 @@ set background=dark
 colorscheme solarized8_flat
 
 
+""" Windows specific settings
+if has('win32')
+	set belloff=all
+	set nobackup
+	set nowritebackup
+	set clipboard=unnamedplus
+endif
+
+
 """ Give esc the same function in terminal mode as normal:
 tnoremap <Esc> <C-\><C-n>
 
